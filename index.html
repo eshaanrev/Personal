@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#0c0a08;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  ::selection{background:#4a67aa;color:#0c0a08}
+</style>
+</helmet>
+
+<div data-site-root style="--accent:#4a67aa;background:#0c0a08;color:#e7e2d7;font-family:'Schibsted Grotesk',sans-serif;min-height:100vh;overflow-x:hidden">
+
+  <nav style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px clamp(20px,5vw,56px);background:rgba(12,10,8,0.82);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid #2a2620">
+    <a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#e7e2d7">
+      <span style="width:8px;height:8px;border-radius:50%;background:var(--accent,#4a67aa);display:inline-block"></span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.02em;font-weight:500">eshaanrev</span>
+    </a>
+    <div style="display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:0.04em">
+      <a href="#work" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">WORK</a>
+      <a href="#projects" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">PROJECTS</a>
+      <a href="#recognition" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">AWARDS</a>
+      <a href="https://vividsense.vercel.app/" target="_blank" rel="noopener" style="color:#e7e2d7;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:1px solid #36312a;padding:7px 13px;border-radius:999px" style-hover="border-color:var(--accent,#4a67aa);color:var(--accent,#4a67aa)">VividSense ↗</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" data-screen-label="Hero" style="max-width:1100px;margin:0 auto;padding:clamp(64px,12vw,150px) clamp(20px,5vw,56px) clamp(44px,6vw,84px)">
+    <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:#8a8071;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+      <span>VividSense · Founder</span>
+      <span style="width:26px;height:1px;background:#3a352d"></span>
+      <span>Student Engineer</span>
+    </div>
+    <h1 data-reveal data-delay="80" style="margin:26px 0 0;font-size:clamp(44px,8.5vw,104px);line-height:0.94;letter-spacing:-0.035em;font-weight:700">
+      Eshaan Revankar
+    </h1>
+    <p data-reveal data-delay="160" style="margin:30px 0 0;max-width:640px;font-size:clamp(17px,2.2vw,22px);line-height:1.55;color:#b9b1a2;font-weight:400">
+      I'm a high-school engineer working on assistive technology — low-cost prosthetics and wearables that help people get around. I started VividSense to make tools like these affordable and genuinely usable.
+    </p>
+    <div data-reveal data-delay="240" style="margin:36px 0 0;display:flex;flex-wrap:wrap;gap:12px">
+      <a href="#work" style="display:inline-flex;align-items:center;gap:9px;background:#e7e2d7;color:#0c0a08;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.03em;padding:13px 22px;border-radius:999px" style-hover="background:var(--accent,#4a67aa)">See the work →</a>
+      <a href="https://www.linkedin.com/in/eshaan-revankar/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#e7e2d7;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.03em;padding:13px 22px;border-radius:999px;border:1px solid #36312a" style-hover="border-color:#e7e2d7">LinkedIn ↗</a>
+      <a href="https://github.com/eshaanrev" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#e7e2d7;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.03em;padding:13px 22px;border-radius:999px;border:1px solid #36312a" style-hover="border-color:#e7e2d7">GitHub ↗</a>
+    </div>
+  </header>
+
+  <!-- MISSION -->
+  <section data-screen-label="Mission" style="border-top:1px solid #2a2620;max-width:1100px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,56px)">
+    <div style="display:grid;grid-template-columns:minmax(0,0.32fr) minmax(0,1fr);gap:clamp(28px,5vw,72px)">
+      <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#8a8071;padding-top:10px">01 — Approach</div>
+      <div data-reveal data-delay="100">
+        <p style="margin:0;font-size:clamp(20px,2.7vw,30px);line-height:1.4;letter-spacing:-0.01em;font-weight:500;color:#ded7ca">
+          I think the best engineering quietly disappears — it just lets someone do the thing they couldn't do before. Assistive technology shouldn't be a luxury, so most of what I build is aimed at making it cost less and work better for the people who actually need it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIVIDSENSE SPOTLIGHT -->
+  <section data-screen-label="VividSense" style="background:#15120f;border-top:1px solid #2a2620;border-bottom:1px solid #2a2620">
+    <div style="max-width:1100px;margin:0 auto;padding:clamp(60px,8vw,110px) clamp(20px,5vw,56px)">
+      <div data-reveal style="display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#8a8071">
+        <span>02 — The Org</span><span style="width:26px;height:1px;background:#3a352d"></span><span style="color:var(--accent,#4a67aa)">President &amp; Founder · 2024 → Now</span>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,0.85fr);gap:clamp(32px,6vw,80px);align-items:end;margin-top:28px">
+        <div data-reveal data-delay="80">
+          <h2 style="margin:0;font-size:clamp(38px,6vw,76px);line-height:0.96;letter-spacing:-0.03em;font-weight:700">VividSense</h2>
+          <p style="margin:22px 0 0;max-width:500px;font-size:clamp(16px,1.9vw,19px);line-height:1.55;color:#b0a899">
+            An HCB-backed, company-sponsored assistive-tech organization. I founded it and handle product development, team operations, and growth — the work of turning a prototype into something a person can actually use.
+          </p>
+          <a href="https://vividsense.vercel.app/" target="_blank" rel="noopener" style="margin-top:26px;display:inline-flex;align-items:center;gap:9px;color:#0c0a08;background:var(--accent,#4a67aa);text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.03em;padding:12px 21px;border-radius:999px" style-hover="background:#e7e2d7">vividsense.vercel.app ↗</a>
+        </div>
+        <div data-reveal data-delay="160" style="display:flex;flex-direction:column;gap:1px;background:#2a2620;border:1px solid #2a2620;border-radius:14px;overflow:hidden">
+          <div style="background:#0c0a08;padding:20px 22px"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#8a8071">Role</div><div style="margin-top:6px;font-size:17px;font-weight:600;color:#ded7ca">Product · Ops · Growth</div></div>
+          <div style="background:#0c0a08;padding:20px 22px"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#8a8071">Backing</div><div style="margin-top:6px;font-size:17px;font-weight:600;color:#ded7ca">HCB · Company-sponsored</div></div>
+          <div style="background:#0c0a08;padding:20px 22px"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#8a8071">Focus</div><div style="margin-top:6px;font-size:17px;font-weight:600;color:#ded7ca">Accessible assistive hardware</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK / TIMELINE -->
+  <section id="work" data-screen-label="Experience" style="max-width:1100px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,56px)">
+    <div data-reveal style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;border-bottom:1px solid #2a2620;padding-bottom:20px">
+      <h2 style="margin:0;font-size:clamp(28px,4vw,46px);letter-spacing:-0.025em;font-weight:700">Experience</h2>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8071">03 — Where I've worked</span>
+    </div>
+
+    <div data-reveal style="display:grid;grid-template-columns:minmax(0,0.28fr) minmax(0,1fr);gap:clamp(16px,4vw,56px);padding:clamp(26px,4vw,40px) 0;border-bottom:1px solid #241f1a">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#9c9384;letter-spacing:0.02em">Sep 2024 — Present<div style="margin-top:6px;color:#6f6859;font-size:12px">Part-time</div></div>
+      <div>
+        <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap"><h3 style="margin:0;font-size:clamp(21px,2.4vw,28px);font-weight:600;letter-spacing:-0.02em">President &amp; Founder</h3><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent,#4a67aa)">VividSense</span></div>
+        <ul style="margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;color:#aaa193;font-size:clamp(15px,1.6vw,16.5px);line-height:1.5">
+          <li style="display:flex;gap:11px"><span style="color:var(--accent,#4a67aa);margin-top:1px">—</span>Founded VividSense, an HCB-backed and company-sponsored assistive-tech organization.</li>
+          <li style="display:flex;gap:11px"><span style="color:var(--accent,#4a67aa);margin-top:1px">—</span>Handle product development, team operations, and org growth day to day.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div data-reveal style="display:grid;grid-template-columns:minmax(0,0.28fr) minmax(0,1fr);gap:clamp(16px,4vw,56px);padding:clamp(26px,4vw,40px) 0;border-bottom:1px solid #241f1a">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#9c9384;letter-spacing:0.02em">Aug 2025 — Present<div style="margin-top:6px;color:#6f6859;font-size:12px">Apprenticeship</div></div>
+      <div>
+        <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap"><h3 style="margin:0;font-size:clamp(21px,2.4vw,28px);font-weight:600;letter-spacing:-0.02em">Structural Lead</h3><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent,#4a67aa)">American Rocketry Challenge</span></div>
+        <ul style="margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;color:#aaa193;font-size:clamp(15px,1.6vw,16.5px);line-height:1.5">
+          <li style="display:flex;gap:11px"><span style="color:var(--accent,#4a67aa);margin-top:1px">—</span>Designed part-specific supports to ensure successful manufacturing.</li>
+          <li style="display:flex;gap:11px"><span style="color:var(--accent,#4a67aa);margin-top:1px">—</span>Managed 3D-printed part configurations of rocket components.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div data-reveal style="display:grid;grid-template-columns:minmax(0,0.28fr) minmax(0,1fr);gap:clamp(16px,4vw,56px);padding:clamp(26px,4vw,40px) 0;border-bottom:1px solid #241f1a">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#9c9384;letter-spacing:0.02em">Nov 2024 — Present<div style="margin-top:6px;color:#6f6859;font-size:12px">Part-time</div></div>
+      <div>
+        <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap"><h3 style="margin:0;font-size:clamp(21px,2.4vw,28px);font-weight:600;letter-spacing:-0.02em">LaunchX</h3><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent,#4a67aa)">Entrepreneurship Program</span></div>
+        <div style="margin-top:14px;display:flex;flex-direction:column;gap:16px">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#8a8071">Executive Board · May 2025 — Present</div>
+            <ul style="margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px;color:#aaa193;font-size:clamp(15px,1.6vw,16.5px);line-height:1.5">
+              <li style="display:flex;gap:11px"><span style="color:var(--accent,#4a67aa);margin-top:1px">—</span>Helped student teams actually get their products built.</li>
+              <li style="display:flex;gap:11px"><span style="color:var(--accent,#4a67aa);margin-top:1px">—</span>Reached out to entrepreneurs to host workshops.</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#8a8071">Club Member · Nov 2024 — May 2025</div>
+            <ul style="margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px;color:#aaa193;font-size:clamp(15px,1.6vw,16.5px);line-height:1.5">
+              <li style="display:flex;gap:11px"><span style="color:var(--accent,#4a67aa);margin-top:1px">—</span>Developed a functioning product prototype.</li>
+              <li style="display:flex;gap:11px"><span style="color:var(--accent,#4a67aa);margin-top:1px">—</span>Placed 2nd at LaunchSB.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-reveal style="display:grid;grid-template-columns:minmax(0,0.28fr) minmax(0,1fr);gap:clamp(16px,4vw,56px);padding:clamp(26px,4vw,40px) 0">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#9c9384;letter-spacing:0.02em">Sep 2023 — Present<div style="margin-top:6px;color:#6f6859;font-size:12px">Part-time</div></div>
+      <div>
+        <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap"><h3 style="margin:0;font-size:clamp(21px,2.4vw,28px);font-weight:600;letter-spacing:-0.02em">VEX Robotics</h3><span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent,#4a67aa)">Competition Team</span></div>
+        <div style="margin-top:14px;display:flex;flex-direction:column;gap:16px">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#8a8071">Programmer · Sep 2024 — Present</div>
+            <ul style="margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px;color:#aaa193;font-size:clamp(15px,1.6vw,16.5px);line-height:1.5">
+              <li style="display:flex;gap:11px"><span style="color:var(--accent,#4a67aa);margin-top:1px">—</span>Built an autonomous selector prototype from scratch.</li>
+              <li style="display:flex;gap:11px"><span style="color:var(--accent,#4a67aa);margin-top:1px">—</span>Helped tune PID for competition performance.</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#8a8071">Scout · Sep 2023 — Sep 2024</div>
+            <ul style="margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px;color:#aaa193;font-size:clamp(15px,1.6vw,16.5px);line-height:1.5">
+              <li style="display:flex;gap:11px"><span style="color:var(--accent,#4a67aa);margin-top:1px">—</span>Studied team processes to build a stronger understanding of the robot.</li>
+              <li style="display:flex;gap:11px"><span style="color:var(--accent,#4a67aa);margin-top:1px">—</span>Scouted teams to gain insight on the competition.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" data-screen-label="Projects" style="background:#15120f;border-top:1px solid #2a2620;border-bottom:1px solid #2a2620">
+    <div style="max-width:1100px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,56px)">
+      <div data-reveal style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap">
+        <h2 style="margin:0;font-size:clamp(28px,4vw,46px);letter-spacing:-0.025em;font-weight:700">Projects</h2>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8071">04 — Things I've made</span>
+      </div>
+
+      <div style="margin-top:38px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,32px)">
+        <article data-reveal style="background:#0c0a08;border:1px solid #2a2620;border-radius:16px;overflow:hidden;display:flex;flex-direction:column">
+          <div style="aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid #2a2620;background:#0c0a08">
+            <video data-dexarm src="uploads/dexarmV3cinimatic.mp4" autoplay muted loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+          </div>
+          <div style="padding:clamp(22px,3vw,30px)">
+            <div style="display:flex;align-items:center;gap:10px"><h3 style="margin:0;font-size:clamp(21px,2.4vw,26px);font-weight:600;letter-spacing:-0.02em">Dexarm</h3><span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#d8cfbf;background:#2a2620;padding:4px 9px;border-radius:999px">Hardware</span></div>
+            <p style="margin:12px 0 0;color:#aaa193;font-size:clamp(15px,1.6vw,16.5px);line-height:1.55">A low-cost prosthetic — built to make a functional, dignified prosthetic reachable for people the priced-out market leaves behind.</p>
+          </div>
+        </article>
+
+        <article data-reveal data-delay="100" style="background:#0c0a08;border:1px solid #2a2620;border-radius:16px;overflow:hidden;display:flex;flex-direction:column">
+          <div style="aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid #2a2620;background:#0c0a08">
+            <img src="uploads/tss.png" alt="The Surrounding Scanner — wearable navigation device" style="width:100%;height:100%;object-fit:cover;display:block">
+          </div>
+          <div style="padding:clamp(22px,3vw,30px)">
+            <div style="display:flex;align-items:center;gap:10px"><h3 style="margin:0;font-size:clamp(21px,2.4vw,26px);font-weight:600;letter-spacing:-0.02em">The Surrounding Scanner</h3><span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#d8cfbf;background:#2a2620;padding:4px 9px;border-radius:999px">Wearable</span></div>
+            <p style="margin:12px 0 0;color:#aaa193;font-size:clamp(15px,1.6vw,16.5px);line-height:1.55">A wearable that helps blind people navigate — sensing the environment around them and turning it into guidance they can feel.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOGNITION -->
+  <section id="recognition" data-screen-label="Recognition" style="max-width:1100px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,56px)">
+    <div data-reveal style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;border-bottom:1px solid #2a2620;padding-bottom:20px">
+      <h2 style="margin:0;font-size:clamp(28px,4vw,46px);letter-spacing:-0.025em;font-weight:700">Awards &amp; Recognition</h2>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8071">05 — Selected honors</span>
+    </div>
+
+    <div style="margin-top:34px;display:flex;flex-direction:column;gap:0">
+      <div data-reveal style="display:grid;grid-template-columns:minmax(0,0.18fr) minmax(0,1fr);gap:clamp(14px,3vw,40px);padding:22px 0;border-bottom:1px solid #241f1a">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent,#4a67aa)">2026</div>
+        <div><div style="font-size:clamp(16px,1.8vw,18px);font-weight:600;letter-spacing:-0.01em;color:#ded7ca">American Rocketry Challenge — National Finalist</div><div style="color:#9c9384;font-size:14.5px;margin-top:3px">National Association of Rocketry · Apr 2026 · Top 100 of 1,107 contestants</div></div>
+      </div>
+      <div data-reveal style="display:grid;grid-template-columns:minmax(0,0.18fr) minmax(0,1fr);gap:clamp(14px,3vw,40px);padding:22px 0;border-bottom:1px solid #241f1a">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent,#4a67aa)">2026</div>
+        <div><div style="font-size:clamp(16px,1.8vw,18px);font-weight:600;letter-spacing:-0.01em;color:#ded7ca">National Recognition Program Award</div><div style="color:#9c9384;font-size:14.5px;margin-top:3px">College Board · Jun 2026 · National recognition for academic achievement</div></div>
+      </div>
+      <div data-reveal style="display:grid;grid-template-columns:minmax(0,0.18fr) minmax(0,1fr);gap:clamp(14px,3vw,40px);padding:22px 0;border-bottom:1px solid #241f1a">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent,#4a67aa)">'24–'26</div>
+        <div><div style="font-size:clamp(16px,1.8vw,18px);font-weight:600;letter-spacing:-0.01em;color:#ded7ca">LaunchSB Awards — SBHS XSTEM</div><div style="color:#9c9384;font-size:14.5px;margin-top:3px">1st Place of 39 teams (2025–26) · 2nd Place of 42 teams (2024–25)</div></div>
+      </div>
+      <div data-reveal style="display:grid;grid-template-columns:minmax(0,0.18fr) minmax(0,1fr);gap:clamp(14px,3vw,40px);padding:22px 0">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent,#4a67aa)">'23–'26</div>
+        <div><div style="font-size:clamp(16px,1.8vw,18px);font-weight:600;letter-spacing:-0.01em;color:#ded7ca">Robotics Awards — VEX Robotics</div><div style="color:#9c9384;font-size:14.5px;margin-top:3px;line-height:1.5">Tournament Champions @ SBHS Over Under &amp; CCHS High Stakes · Sportsmanship Award @ NJ State High Stakes Championship · Excellence Award @ SBHS Push Back · Think Award @ Pirate Popoff Push Back · 3× States Qualification</div></div>
+      </div>
+    </div>
+
+    <!-- certifications -->
+    <div data-reveal style="margin-top:clamp(40px,6vw,64px);border-top:1px solid #2a2620;padding-top:clamp(28px,4vw,40px);display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <h3 style="margin:0;font-size:clamp(24px,3vw,34px);letter-spacing:-0.025em;font-weight:700">Certifications</h3>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8071">Licenses &amp; credentials</span>
+    </div>
+    <div style="margin-top:14px;display:flex;flex-direction:column;gap:0">
+      <div data-reveal style="display:grid;grid-template-columns:minmax(0,0.18fr) minmax(0,1fr);gap:clamp(14px,3vw,40px);padding:22px 0;border-bottom:1px solid #241f1a">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent,#4a67aa)">2025</div>
+        <div><div style="font-size:clamp(16px,1.8vw,18px);font-weight:600;letter-spacing:-0.01em;color:#ded7ca">Basic Electrical Design Certification</div><div style="color:#9c9384;font-size:14.5px;margin-top:3px">GE Aerospace · Forage · Jul 2025</div></div>
+      </div>
+      <div data-reveal style="display:grid;grid-template-columns:minmax(0,0.18fr) minmax(0,1fr);gap:clamp(14px,3vw,40px);padding:22px 0">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent,#4a67aa)">2025</div>
+        <div><div style="font-size:clamp(16px,1.8vw,18px);font-weight:600;letter-spacing:-0.01em;color:#ded7ca">Professional Web-App Development Certification</div><div style="color:#9c9384;font-size:14.5px;margin-top:3px">CodeWizardsHQ · Jan 2025</div></div>
+      </div>
+    </div>
+
+    <!-- education -->
+    <div data-reveal style="margin-top:clamp(40px,6vw,68px);background:#15120f;border:1px solid #2a2620;border-radius:18px;padding:clamp(28px,4vw,44px)">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#8a8071">Education</div>
+          <h3 style="margin:12px 0 0;font-size:clamp(22px,2.8vw,30px);font-weight:600;letter-spacing:-0.02em">South Brunswick High School</h3>
+          <div style="margin-top:6px;color:#9c9384;font-size:14.5px">Class of 2027 · Grade 11<span data-sat> · SAT 1510</span> · GPA 4.22</div>
+        </div>
+      </div>
+      <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:8px">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.02em;color:#b4ab9b;border:1px solid #36312a;padding:7px 12px;border-radius:8px">AP Calculus AB</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.02em;color:#b4ab9b;border:1px solid #36312a;padding:7px 12px;border-radius:8px">AP Chemistry</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.02em;color:#b4ab9b;border:1px solid #36312a;padding:7px 12px;border-radius:8px">AP Computer Science A</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.02em;color:#b4ab9b;border:1px solid #36312a;padding:7px 12px;border-radius:8px">AP Language &amp; Composition</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.02em;color:#b4ab9b;border:1px solid #36312a;padding:7px 12px;border-radius:8px">AP Physics C: E&amp;M</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.02em;color:#b4ab9b;border:1px solid #36312a;padding:7px 12px;border-radius:8px">AP Physics C: Mechanics</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.02em;color:#b4ab9b;border:1px solid #36312a;padding:7px 12px;border-radius:8px">CS: Mobile App Development</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.02em;color:#b4ab9b;border:1px solid #36312a;padding:7px 12px;border-radius:8px">CS: VR &amp; Game Design</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer data-screen-label="Contact" style="background:#15120f;border-top:1px solid #2a2620">
+    <div style="max-width:1100px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,56px)">
+      <div data-reveal style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#8a8071">06 — Get in touch</div>
+      <h2 data-reveal data-delay="80" style="margin:20px 0 0;font-size:clamp(34px,5.5vw,66px);line-height:0.98;letter-spacing:-0.03em;font-weight:700;max-width:18ch;color:#e7e2d7">Always happy to talk about building useful things.</h2>
+      <div data-reveal data-delay="160" style="margin-top:38px;display:flex;flex-wrap:wrap;gap:12px">
+        <a href="https://www.linkedin.com/in/eshaan-revankar/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:var(--accent,#4a67aa);color:#0c0a08;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13.5px;letter-spacing:0.03em;padding:14px 24px;border-radius:999px" style-hover="background:#e7e2d7">LinkedIn ↗</a>
+        <a href="https://github.com/eshaanrev" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#e7e2d7;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13.5px;letter-spacing:0.03em;padding:14px 24px;border-radius:999px;border:1px solid #36312a" style-hover="border-color:#e7e2d7">GitHub ↗</a>
+        <a href="https://vividsense.vercel.app/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#e7e2d7;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13.5px;letter-spacing:0.03em;padding:14px 24px;border-radius:999px;border:1px solid #36312a" style-hover="border-color:#e7e2d7">VividSense ↗</a>
+      </div>
+      <div style="margin-top:clamp(44px,6vw,84px);padding-top:24px;border-top:1px solid #2a2620;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#6f6859">
+        <span>Eshaan Revankar</span>
+        <span>© 2026</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#4a67aa&quot;,&quot;options&quot;:[&quot;#4a67aa&quot;,&quot;#5e7bb8&quot;,&quot;#5b8c7b&quot;,&quot;#bd5a34&quot;,&quot;#b4ab9b&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;showSat&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this.applyTweaks();
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach((el) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      const d = el.getAttribute('data-delay') || '0';
+      el.style.transition = 'opacity .8s cubic-bezier(.2,.6,.2,1) ' + d + 'ms, transform .8s cubic-bezier(.2,.6,.2,1) ' + d + 'ms';
+      el.style.willChange = 'opacity, transform';
+    });
+    const reveal = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    const hardReveal = (el) => { el.style.transition = 'none'; el.style.opacity = '1'; el.style.transform = 'none'; };
+    const revealInView = () => {
+      els.forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.95 && r.bottom > 0) reveal(el);
+      });
+    };
+    revealInView();
+    if ('IntersectionObserver' in window) {
+      this._io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { reveal(e.target); this._io.unobserve(e.target); }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -7% 0px' });
+      els.forEach((el) => this._io.observe(el));
+    }
+    this._onScroll = revealInView;
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._safety = setTimeout(() => els.forEach(hardReveal), 1300);
+
+    const vid = document.querySelector('[data-dexarm]');
+    if (vid) {
+      const key = 'dexarm-vid-t';
+      const saved = parseFloat(localStorage.getItem(key));
+      const restore = () => { if (!isNaN(saved) && saved < (vid.duration || Infinity)) { try { vid.currentTime = saved; } catch (e) {} } };
+      if (vid.readyState >= 1) restore(); else vid.addEventListener('loadedmetadata', restore, { once: true });
+      this._vidSave = () => localStorage.setItem(key, String(vid.currentTime));
+      vid.addEventListener('timeupdate', this._vidSave);
+    }
+  }
+
+  componentDidUpdate() { this.applyTweaks(); }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._safety) clearTimeout(this._safety);
+  }
+
+  applyTweaks() {
+    const root = document.querySelector('[data-site-root]');
+    if (root) root.style.setProperty('--accent', this.props.accent || '#4a67aa');
+    const show = this.props.showSat !== false;
+    document.querySelectorAll('[data-sat]').forEach((el) => { el.style.display = show ? '' : 'none'; });
+  }
+
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
