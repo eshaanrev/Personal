@@ -1,3 +1,9 @@
+# Source / scratch files not needed for the deployed site
 .thumbnail
 Eshaan Revankar.dc.html
+
+# Tooling / OS
+.claude/
+.vercel/
 .DS_Store
+node_modules/

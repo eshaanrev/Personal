@@ -176,7 +176,7 @@
       <div style="margin-top:38px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,32px)">
         <article data-reveal style="background:#0c0a08;border:1px solid #2a2620;border-radius:16px;overflow:hidden;display:flex;flex-direction:column">
           <div style="aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid #2a2620;background:#0c0a08">
-            <video data-dexarm src="uploads/dexarmV3cinimatic.mp4" autoplay muted loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+            <video data-dexarm src="uploads/dexarmV3cinimatic.mp4" autoplay muted loop playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;display:block"></video>
           </div>
           <div style="padding:clamp(22px,3vw,30px)">
             <div style="display:flex;align-items:center;gap:10px"><h3 style="margin:0;font-size:clamp(21px,2.4vw,26px);font-weight:600;letter-spacing:-0.02em">Dexarm</h3><span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#d8cfbf;background:#2a2620;padding:4px 9px;border-radius:999px">Hardware</span></div>
@@ -284,12 +284,14 @@
 class Component extends DCLogic {
   componentDidMount() {
     this.applyTweaks();
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const els = Array.from(document.querySelectorAll('[data-reveal]'));
     els.forEach((el) => {
+      if (reduceMotion) { el.style.opacity = '1'; el.style.transform = 'none'; return; }
       el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
+      el.style.transform = 'translateY(16px) scale(0.992)';
       const d = el.getAttribute('data-delay') || '0';
-      el.style.transition = 'opacity .8s cubic-bezier(.2,.6,.2,1) ' + d + 'ms, transform .8s cubic-bezier(.2,.6,.2,1) ' + d + 'ms';
+      el.style.transition = 'opacity .75s cubic-bezier(.22,.61,.36,1) ' + d + 'ms, transform .75s cubic-bezier(.22,.61,.36,1) ' + d + 'ms';
       el.style.willChange = 'opacity, transform';
     });
     const reveal = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
@@ -311,14 +313,44 @@ class Component extends DCLogic {
     }
     this._onScroll = revealInView;
     window.addEventListener('scroll', this._onScroll, { passive: true });
-    this._safety = setTimeout(() => els.forEach(hardReveal), 1300);
+    this._safety = setTimeout(() => els.forEach((el) => { if (getComputedStyle(el).opacity !== '1') hardReveal(el); }), 1300);
+
+    // subtle hover polish on project cards
+    if (!reduceMotion) {
+      document.querySelectorAll('#projects article').forEach((card) => {
+        card.style.transition += ', box-shadow .35s ease, border-color .35s ease';
+        card.addEventListener('pointerenter', () => {
+          card.style.boxShadow = '0 14px 44px -16px rgba(74,103,170,0.45)';
+          card.style.borderColor = 'var(--accent,#4a67aa)';
+        });
+        card.addEventListener('pointerleave', () => {
+          card.style.boxShadow = 'none';
+          card.style.borderColor = '#2a2620';
+        });
+      });
+    }
 
     const vid = document.querySelector('[data-dexarm]');
     if (vid) {
       const key = 'dexarm-vid-t';
+      vid.muted = true; vid.setAttribute('muted', '');
       const saved = parseFloat(localStorage.getItem(key));
-      const restore = () => { if (!isNaN(saved) && saved < (vid.duration || Infinity)) { try { vid.currentTime = saved; } catch (e) {} } };
+      const restore = () => {
+        if (!isNaN(saved) && saved > 0.1 && saved < (vid.duration || Infinity) - 0.3) {
+          try { vid.currentTime = saved; } catch (e) {}
+        }
+      };
+      const tryPlay = () => { const p = vid.play(); if (p && p.catch) p.catch(() => {}); };
       if (vid.readyState >= 1) restore(); else vid.addEventListener('loadedmetadata', restore, { once: true });
+      vid.addEventListener('canplay', tryPlay);
+      tryPlay();
+      if ('IntersectionObserver' in window) {
+        this._vio = new IntersectionObserver((entries) => {
+          entries.forEach((e) => { if (e.isIntersecting) tryPlay(); });
+        }, { threshold: 0.2 });
+        this._vio.observe(vid);
+      }
+      window.addEventListener('pointerdown', tryPlay, { once: true });
       this._vidSave = () => localStorage.setItem(key, String(vid.currentTime));
       vid.addEventListener('timeupdate', this._vidSave);
     }
@@ -328,6 +360,7 @@ class Component extends DCLogic {
 
   componentWillUnmount() {
     if (this._io) this._io.disconnect();
+    if (this._vio) this._vio.disconnect();
     if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
     if (this._safety) clearTimeout(this._safety);
   }
