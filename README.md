@@ -1,14 +1,20 @@
 # Personal Site — Eshaan Revankar
 
-A static personal portfolio site. No build step — plain HTML, a single runtime script, and media assets.
+A static, multi-page personal portfolio site. No build step — plain HTML, a single runtime script, and media assets.
 
 ## Structure
 
 ```
-index.html     # the page (markup + inline styles + reveal/video logic)
-support.js     # runtime that powers the <x-dc> component framework
-uploads/       # media assets (project video + image)
-vercel.json    # static hosting config (clean URLs + long-lived asset caching)
+index.html                # site root — copy of the home page (served at "/")
+Eshaan Revankar.dc.html   # home page (nav links point here)
+About.dc.html             # About page
+Experience.dc.html        # Experience page
+Projects.dc.html          # Projects page
+Awards.dc.html            # Awards page
+Contact.dc.html           # Contact page
+support.js                # runtime that powers the <x-dc> component framework
+uploads/                  # media assets (video, images, resume PDF)
+vercel.json               # static hosting config (clean URLs + long-lived asset caching)
 ```
 
 ## Develop locally
