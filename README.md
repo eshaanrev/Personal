@@ -2,10 +2,12 @@
 
 A static, multi-page personal portfolio site. No build step — plain HTML, a single runtime script, and media assets.
 
+[View the live site](https://eshaanrev.vercel.app)
+
 ## Structure
 
 ```
-index.html                # site root — copy of the home page (served at "/")
+  index.html                # site root
 Eshaan Revankar.dc.html   # home page (nav links point here)
 About.dc.html             # About page
 Experience.dc.html        # Experience page
@@ -19,9 +21,10 @@ vercel.json               # static hosting config (clean URLs + long-lived asset
 
 ## Develop locally
 
-Serve the folder with any static server, e.g.:
+Validate the pages and serve the folder with any static server:
 
 ```bash
+npm run check
 python3 -m http.server 8000
 # then open http://localhost:8000
 ```

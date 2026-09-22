@@ -1,7 +1,31 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/Eshaan%20Revankar.dc", "destination": "/", "permanent": true },
+    { "source": "/About.dc", "destination": "/about", "permanent": true },
+    { "source": "/Experience.dc", "destination": "/experience", "permanent": true },
+    { "source": "/Projects.dc", "destination": "/projects", "permanent": true },
+    { "source": "/Awards.dc", "destination": "/awards", "permanent": true },
+    { "source": "/Contact.dc", "destination": "/contact", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/about", "destination": "/About.dc.html" },
+    { "source": "/experience", "destination": "/Experience.dc.html" },
+    { "source": "/projects", "destination": "/Projects.dc.html" },
+    { "source": "/awards", "destination": "/Awards.dc.html" },
+    { "source": "/contact", "destination": "/Contact.dc.html" }
+  ],
   "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    },
     {
       "source": "/uploads/(.*)",
       "headers": [

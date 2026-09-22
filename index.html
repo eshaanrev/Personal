@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Eshaan Revankar is a student engineer and VividSense founder building accessible prosthetics, wearables, and software.">
+<meta name="theme-color" content="#0c0a08">
+<meta property="og:title" content="Eshaan Revankar — Student Engineer">
+<meta property="og:description" content="Accessible hardware, assistive technology, and software built to help people.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eshaanrev.vercel.app/">
+<meta property="og:image" content="https://eshaanrev.vercel.app/uploads/tss.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://eshaanrev.vercel.app/">
 <link rel="icon" type="image/png" href="uploads/logo-er.png">
-<script src="./support.js"></script>
+<link rel="stylesheet" href="./site.css">
+<title>Eshaan Revankar — Student Engineer</title>
+<script src="./support.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -22,18 +33,18 @@
 
 <div data-site-root style="--accent:#4a67aa;background:#0c0a08;color:#e7e2d7;font-family:'Schibsted Grotesk',sans-serif;min-height:100vh;overflow-x:hidden">
 
-  <nav style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px clamp(20px,5vw,56px);background:rgba(12,10,8,0.82);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid #2a2620">
-    <a href="Eshaan Revankar.dc.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#e7e2d7">
-      <img src="uploads/logo-er.png" alt="ER logo" style="width:30px;height:30px;object-fit:contain;display:block;transition:transform .3s cubic-bezier(.2,.7,.3,1)" style-hover="transform:rotate(-6deg) scale(1.08)">
+  <nav aria-label="Primary" class="site-nav" style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px clamp(20px,5vw,56px);background:rgba(12,10,8,0.82);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid #2a2620">
+    <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#e7e2d7">
+      <img src="uploads/logo-er.png" alt="Eshaan Revankar home" width="30" height="30" style="width:30px;height:30px;object-fit:contain;display:block;transition:transform .3s cubic-bezier(.2,.7,.3,1)" style-hover="transform:rotate(-6deg) scale(1.08)">
       <span style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.02em;font-weight:500">eshaanrev</span>
     </a>
-    <div style="display:flex;align-items:center;gap:clamp(12px,2.2vw,26px);font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:0.04em">
-      <a href="Eshaan Revankar.dc.html" style="color:var(--accent,#4a67aa);text-decoration:none">HOME</a>
-      <a href="About.dc.html" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">ABOUT</a>
-      <a href="Experience.dc.html" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">EXPERIENCE</a>
-      <a href="Projects.dc.html" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">PROJECTS</a>
-      <a href="Awards.dc.html" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">AWARDS</a>
-      <a href="Contact.dc.html" style="color:#e7e2d7;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:1px solid #36312a;padding:7px 13px;border-radius:999px" style-hover="border-color:var(--accent,#4a67aa);color:var(--accent,#4a67aa)">Contact</a>
+    <div class="site-nav-links" style="display:flex;align-items:center;gap:clamp(12px,2.2vw,26px);font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:0.04em">
+      <a href="/" aria-current="page" style="color:var(--accent,#4a67aa);text-decoration:none">HOME</a>
+      <a href="/about" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">ABOUT</a>
+      <a href="/experience" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">EXPERIENCE</a>
+      <a href="/projects" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">PROJECTS</a>
+      <a href="/awards" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">AWARDS</a>
+      <a href="/contact" style="color:#e7e2d7;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:1px solid #36312a;padding:7px 13px;border-radius:999px" style-hover="border-color:var(--accent,#4a67aa);color:var(--accent,#4a67aa)">Contact</a>
     </div>
   </nav>
 
@@ -51,9 +62,9 @@
       I'm a high-school engineer working on assistive technology — low-cost prosthetics and wearables that help people get around. I started VividSense to make tools like these affordable and genuinely usable.
     </p>
     <div data-reveal data-delay="240" style="margin:36px 0 0;display:flex;flex-wrap:wrap;gap:12px">
-      <a href="Projects.dc.html" style="display:inline-flex;align-items:center;gap:9px;background:#e7e2d7;color:#0c0a08;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.03em;padding:13px 22px;border-radius:999px;transition:background .25s ease,transform .25s ease" style-hover="background:var(--accent,#4a67aa);transform:translateY(-2px)">See the work →</a>
-      <a href="https://www.linkedin.com/in/eshaan-revankar/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#e7e2d7;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.03em;padding:13px 22px;border-radius:999px;border:1px solid #36312a;transition:border-color .25s ease,transform .25s ease" style-hover="border-color:#e7e2d7;transform:translateY(-2px)">LinkedIn ↗</a>
-      <a href="https://github.com/eshaanrev" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#e7e2d7;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.03em;padding:13px 22px;border-radius:999px;border:1px solid #36312a;transition:border-color .25s ease,transform .25s ease" style-hover="border-color:#e7e2d7;transform:translateY(-2px)">GitHub ↗</a>
+      <a href="/projects" style="display:inline-flex;align-items:center;gap:9px;background:#e7e2d7;color:#0c0a08;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.03em;padding:13px 22px;border-radius:999px;transition:background .25s ease,transform .25s ease" style-hover="background:var(--accent,#4a67aa);transform:translateY(-2px)">See the work →</a>
+      <a href="https://www.linkedin.com/in/eshaan-revankar/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#e7e2d7;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.03em;padding:13px 22px;border-radius:999px;border:1px solid #36312a;transition:border-color .25s ease,transform .25s ease" style-hover="border-color:#e7e2d7;transform:translateY(-2px)">LinkedIn ↗</a>
+      <a href="https://github.com/eshaanrev" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:9px;background:transparent;color:#e7e2d7;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.03em;padding:13px 22px;border-radius:999px;border:1px solid #36312a;transition:border-color .25s ease,transform .25s ease" style-hover="border-color:#e7e2d7;transform:translateY(-2px)">GitHub ↗</a>
     </div>
   </header>
 
@@ -81,7 +92,7 @@
           <p style="margin:22px 0 0;max-width:500px;font-size:clamp(16px,1.9vw,19px);line-height:1.55;color:#b0a899">
             An HCB-backed, JLCPCB-sponsored assistive-tech organization. I founded it and handle product development, team operations, and growth — the work of turning a prototype into something a person can actually use.
           </p>
-          <a href="https://vividsense.vercel.app/" target="_blank" rel="noopener" style="margin-top:26px;display:inline-flex;align-items:center;gap:9px;color:#0c0a08;background:var(--accent,#4a67aa);text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.03em;padding:12px 21px;border-radius:999px" style-hover="background:#e7e2d7">vividsense.vercel.app ↗</a>
+          <a href="https://vividsense.vercel.app/" target="_blank" rel="noopener noreferrer" style="margin-top:26px;display:inline-flex;align-items:center;gap:9px;color:#0c0a08;background:var(--accent,#4a67aa);text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.03em;padding:12px 21px;border-radius:999px" style-hover="background:#e7e2d7">vividsense.vercel.app ↗</a>
         </div>
         <div data-reveal data-delay="160" style="display:flex;flex-direction:column;gap:1px;background:#2a2620;border:1px solid #2a2620;border-radius:14px;overflow:hidden">
           <div style="background:#0c0a08;padding:20px 22px"><div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#8a8071">Role</div><div style="margin-top:6px;font-size:17px;font-weight:600;color:#ded7ca">Product · Ops · Growth</div></div>
@@ -99,19 +110,19 @@
       <span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8a8071">03 — Around the site</span>
     </div>
     <div style="margin-top:30px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#2a2620;border:1px solid #2a2620;border-radius:16px;overflow:hidden">
-      <a data-reveal href="Experience.dc.html" style="background:#15120f;padding:28px 24px;text-decoration:none;color:#e7e2d7;display:flex;flex-direction:column;gap:8px;transition:background .3s ease,transform .3s cubic-bezier(.2,.7,.3,1)" style-hover="background:#191510;transform:translateY(-4px)">
+      <a data-reveal href="/experience" style="background:#15120f;padding:28px 24px;text-decoration:none;color:#e7e2d7;display:flex;flex-direction:column;gap:8px;transition:background .3s ease,transform .3s cubic-bezier(.2,.7,.3,1)" style-hover="background:#191510;transform:translateY(-4px)">
         <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a8071">Where I've worked</span>
         <span style="font-size:19px;font-weight:600">Experience →</span>
       </a>
-      <a data-reveal data-delay="60" href="Projects.dc.html" style="background:#15120f;padding:28px 24px;text-decoration:none;color:#e7e2d7;display:flex;flex-direction:column;gap:8px;transition:background .3s ease,transform .3s cubic-bezier(.2,.7,.3,1)" style-hover="background:#191510;transform:translateY(-4px)">
+      <a data-reveal data-delay="60" href="/projects" style="background:#15120f;padding:28px 24px;text-decoration:none;color:#e7e2d7;display:flex;flex-direction:column;gap:8px;transition:background .3s ease,transform .3s cubic-bezier(.2,.7,.3,1)" style-hover="background:#191510;transform:translateY(-4px)">
         <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a8071">Things I've made</span>
         <span style="font-size:19px;font-weight:600">Projects →</span>
       </a>
-      <a data-reveal data-delay="120" href="Awards.dc.html" style="background:#15120f;padding:28px 24px;text-decoration:none;color:#e7e2d7;display:flex;flex-direction:column;gap:8px;transition:background .3s ease,transform .3s cubic-bezier(.2,.7,.3,1)" style-hover="background:#191510;transform:translateY(-4px)">
+      <a data-reveal data-delay="120" href="/awards" style="background:#15120f;padding:28px 24px;text-decoration:none;color:#e7e2d7;display:flex;flex-direction:column;gap:8px;transition:background .3s ease,transform .3s cubic-bezier(.2,.7,.3,1)" style-hover="background:#191510;transform:translateY(-4px)">
         <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a8071">Honors &amp; school</span>
         <span style="font-size:19px;font-weight:600">Awards →</span>
       </a>
-      <a data-reveal data-delay="180" href="About.dc.html" style="background:#15120f;padding:28px 24px;text-decoration:none;color:#e7e2d7;display:flex;flex-direction:column;gap:8px;transition:background .3s ease,transform .3s cubic-bezier(.2,.7,.3,1)" style-hover="background:#191510;transform:translateY(-4px)">
+      <a data-reveal data-delay="180" href="/about" style="background:#15120f;padding:28px 24px;text-decoration:none;color:#e7e2d7;display:flex;flex-direction:column;gap:8px;transition:background .3s ease,transform .3s cubic-bezier(.2,.7,.3,1)" style-hover="background:#191510;transform:translateY(-4px)">
         <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8a8071">Get to know me</span>
         <span style="font-size:19px;font-weight:600">About →</span>
       </a>
@@ -123,9 +134,9 @@
     <div style="max-width:1100px;margin:0 auto;padding:clamp(40px,6vw,64px) clamp(20px,5vw,56px);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#6f6859">
       <span>Eshaan Revankar</span>
       <div style="display:flex;gap:18px">
-        <a href="https://www.linkedin.com/in/eshaan-revankar/" target="_blank" rel="noopener" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">LinkedIn</a>
-        <a href="https://github.com/eshaanrev" target="_blank" rel="noopener" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">GitHub</a>
-        <a href="https://vividsense.vercel.app/" target="_blank" rel="noopener" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">VividSense</a>
+        <a href="https://www.linkedin.com/in/eshaan-revankar/" target="_blank" rel="noopener noreferrer" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">LinkedIn</a>
+        <a href="https://github.com/eshaanrev" target="_blank" rel="noopener noreferrer" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">GitHub</a>
+        <a href="https://vividsense.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:#9c9384;text-decoration:none" style-hover="color:#e7e2d7">VividSense</a>
       </div>
       <span>© 2026</span>
     </div>
