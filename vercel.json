@@ -9,13 +9,6 @@
     { "source": "/Awards.dc", "destination": "/awards", "permanent": true },
     { "source": "/Contact.dc", "destination": "/contact", "permanent": true }
   ],
-  "rewrites": [
-    { "source": "/about", "destination": "/About.dc.html" },
-    { "source": "/experience", "destination": "/Experience.dc.html" },
-    { "source": "/projects", "destination": "/Projects.dc.html" },
-    { "source": "/awards", "destination": "/Awards.dc.html" },
-    { "source": "/contact", "destination": "/Contact.dc.html" }
-  ],
   "headers": [
     {
       "source": "/(.*)",

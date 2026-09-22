@@ -6,18 +6,10 @@ A static, multi-page personal portfolio site. No build step — plain HTML, a si
 
 ## Structure
 
-```
-  index.html                # site root
-Eshaan Revankar.dc.html   # home page (nav links point here)
-About.dc.html             # About page
-Experience.dc.html        # Experience page
-Projects.dc.html          # Projects page
-Awards.dc.html            # Awards page
-Contact.dc.html           # Contact page
-support.js                # runtime that powers the <x-dc> component framework
-uploads/                  # media assets (video, images, resume PDF)
-vercel.json               # static hosting config (clean URLs + long-lived asset caching)
-```
+The public site uses plain, semantic HTML pages with shared `site.css` and
+`site.js` assets. Clean URLs expose `/about`, `/education`, `/experience`,
+`/projects`, `/awards`, and `/contact`. The older `.dc.html` exports remain only
+as redirected legacy files.
 
 ## Develop locally
 
